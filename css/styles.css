@@ -316,6 +316,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
@@ -679,7 +680,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 500ms linear, visibility 500ms linear;
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
 .modal {
   position: absolute;
@@ -694,17 +695,17 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
+  width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
-  box-sizing: border-box;
   cursor: pointer;
   padding: 0;
 }
 .close-btn-icon {
-  width: 30px;
-  height: 30px;
+  width: 11px;
+  height: 11px;
 }
 
 .is-hidden {
