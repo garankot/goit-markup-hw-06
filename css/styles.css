@@ -254,9 +254,6 @@ body {
 /* ===end hero=== */
 
 /* ===features_section=== */
-.features-title {
-  display: none;
-}
 .features-section {
   padding-top: 94px;
 }
@@ -764,6 +761,19 @@ border-radius: 4px;
   border-radius: 4px;
   margin-top: 4px;
   padding-left: 42px;
+  transition: border-color 250ms var(--transition-timing-function);
+}
+.modal-form-input:focus{
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.input-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
 }
 
 .modal-form-message {
@@ -774,14 +784,53 @@ border-radius: 4px;
   margin-top: 4px;
   padding: 12px 16px;
   resize: none;
+  transition: border-color 250ms var(--transition-timing-function);
+  
+}
+.modal-form-message::placeholder{
+  font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-form-checkbox-lable{
+.modal-form-message:focus{
+  outline: none;
+  border-color: var(--accent-color); 
+}
+
+.modal-form-checkbox-label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--grey-text-color);
   margin-bottom: 30px;
+}
+
+.modal-form-checkbox:checked + .modal-form-checkbox-label::before{
+  background-image: url(../images/icons/iconcheck.svg);
+}
+
+/* .modal-form-checkbox:focus + .modal-form-checkbox-label::before{
+  outline: 1px solid rgba(33, 150, 243, 0.9);
+} */
+
+.modal-form-checkbox-label::before{
+  display: block;
+  content: "";
+  background-image: url(../images/icons/viconcheck.svg);
+  width: 16px;
+  height: 15px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.modal-form-checkbox-link{
+text-decoration-line: underline;
+color: var(--accent-color);
 }
 
 .modal-form-btn {
@@ -797,4 +846,13 @@ border-radius: 4px;
   border-radius: 4px;
   border: none;
   color: var(--main-title-color);
+  transition: background-color 250ms var(--transition-timing-function);
 }
+
+.modal-form-btn:hover,
+.modal-form-btn:focus{
+  background: var(--btn-hover-color);
+}
+
+
+
