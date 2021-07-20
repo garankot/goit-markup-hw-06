@@ -622,6 +622,11 @@ body {
   cursor: pointer;
 }
 
+.subscribe-btn:hover{
+  background-color: var(--btn-hover-color);
+  transition: background-color 250ms var(--transition-timing-function);
+}
+
 .subscribe-btn-icon {
   width: 24px;
   height: 24px;
